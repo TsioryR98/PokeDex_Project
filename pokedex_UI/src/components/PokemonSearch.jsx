@@ -2,26 +2,9 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import "../assets/home.css"
-import React, { useState , useEffect } from 'react';
-import { fetchPokemonData } from '../api/apiPokemon';
+import React from 'react';
 
-const PokemonSearch = ({pokeIdOrName}) => {
-    const [pokemon, setPokemon] = useState(null);
-    const getPokemonData = async () => {
-        try {
-            const data = await fetchPokemonData(pokeIdOrName);
-            setPokemon(data);
-            
-        } catch (error) {
-            console.error("Error fetching:", error);
-        }
-
-    }
-    useEffect(() => {
-        getPokemonData()
-
-     }, [pokeIdOrName]);
-
+const PokemonSearch = () => {
   return (
     <>
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -39,12 +22,7 @@ const PokemonSearch = ({pokeIdOrName}) => {
       </Container>
 
     </Navbar> 
-    <div>
-        <h1>Pokémon Fetcher</h1>
-        <PokemonSearch pokeIdOrName="pikachu" /> 
-      </div>
     </>
   );
 }
-
 export default PokemonSearch;

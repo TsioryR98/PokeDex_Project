@@ -1,8 +1,7 @@
 import { instancePoke } from "./api";
 
 //export data from API/V2
-
-export const fetchPokemonData = async (pokeIdOrName) => {
+const fetchPokemonData = async (pokeIdOrName) => {
     try {
         const response = await instancePoke
             .get(`/pokemon/${pokeIdOrName}`);
@@ -12,3 +11,4 @@ export const fetchPokemonData = async (pokeIdOrName) => {
         throw error;
     }
 }
+export default fetchPokemonData
