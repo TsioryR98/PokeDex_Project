@@ -17,7 +17,8 @@ const PokemonSearch = () => {
               className="input-search me-2"
               placeholder="Enter Id or Name"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-success" className="me-2">Search</Button>
+            <Button variant="outline-warning">Random</Button>
         </div>
       </Container>
 

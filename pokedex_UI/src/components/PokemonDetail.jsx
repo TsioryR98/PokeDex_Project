@@ -1,7 +1,9 @@
 import React, { useState , useEffect } from 'react';
 import fetchPokemonData from '../api/apiPokemon';
+import "../assets/home.css"
 
- const PokemonDetail = ({pokeIdOrName}) => {
+
+const PokemonDetail = ({pokeIdOrName}) => {
     const [pokemon, setPokemon] = useState(null);
     
     const getPokemonData = async () => {
@@ -23,12 +25,20 @@ import fetchPokemonData from '../api/apiPokemon';
         <>
         <div>
             {pokemon ? (
-                <div>
-                    <h2>{pokemon.name}</h2>
-                    <img src={pokemon.sprites.other['official-artwork'].front_default} alt={pokemon.name} />
-                    <p>Height: {pokemon.height}</p>
-                    <p>Weight: {pokemon.weight}</p>
+                <>
+                <div className='container'>
+                    <div className='pokemon-container'>
+                        <h6>{pokemon.types[0].type.name.toUpperCase()}</h6>
+                        <h2 className='fw-bold'>{pokemon.name.toUpperCase()}</h2>
+                        <p>Height: {pokemon.height}</p>
+                        <p>Weight: {pokemon.weight}</p>
+                        <p>Abilities: {pokemon.abilities[1].ability.name}</p>
+                    </div>
+                <div className='pokemon-details1'>
+                    <img src={pokemon.sprites.other['official-artwork'].front_shiny} alt={pokemon.name} />
                 </div>
+                </div>
+                </>
             ) : (
                 <p>No Pokémon found.</p>
             )}

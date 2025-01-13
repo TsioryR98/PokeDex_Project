@@ -7,10 +7,9 @@ const App = () => {
   return (
     <>
       <PokemonSearch/>
-
       <div>
             <PokemonDetail pokeIdOrName="pikachu" />
-        </div>
+      </div>
 
     </>
   )

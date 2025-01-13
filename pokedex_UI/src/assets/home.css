@@ -1,3 +1,28 @@
-.input-search{
+.container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 50%;
+    background-color: lightgrey; 
+    box-sizing: border-box;
+}
+.pokemon-container {
+    background-color: yellow;
     width: 100%;
+    box-sizing: border-box;
+}
+
+.pokemon-details1 {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: aqua;
+    flex: 0.5;
+    box-sizing: border-box;
+}
+
+.pokemon-details1 img {
+    height: 230px; 
+    width: 230px; 
+    object-fit: contain;
 }
