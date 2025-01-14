@@ -1,18 +1,16 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import PokemonSearch from './components/PokemonSearch'
-import PokemonDetail from './components/PokemonDetail';
+import "bootstrap/dist/css/bootstrap.min.css";
+import PokemonSearch from "./components/PokemonSearch";
+import PokemonDetail from "./components/PokemonDetail";
 
 const App = () => {
-
   return (
     <>
-      <PokemonSearch/>
+      <PokemonSearch />
       <div>
-            <PokemonDetail pokeIdOrName="pikachu" />
+        <PokemonDetail pokeIdOrName="150" />
       </div>
-
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
