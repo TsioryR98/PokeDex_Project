@@ -7,7 +7,7 @@ const App = () => {
     <>
       <PokemonSearch />
       <div>
-        <PokemonDetail pokeIdOrName="150" />
+        <PokemonDetail pokeIdOrName="45" />
       </div>
     </>
   );

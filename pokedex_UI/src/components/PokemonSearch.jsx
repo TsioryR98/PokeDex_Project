@@ -2,9 +2,11 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import "../assets/home.css";
-import React from "react";
+import React, { useState} from "react";
 
 const PokemonSearch = () => {
+  const [searchPokemon, setsearchPokemon] = useState("");
+  const handleSearchPokemon = (e) => setsearchPokemon(e.target.value);
   return (
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
@@ -14,6 +16,8 @@ const PokemonSearch = () => {
           <div id="navbarScroll" className="d-flex align-items-center">
             <input
               type="text"
+              value={searchPokemon}
+              onChange={handleSearchPokemon}
               className="input-search me-2"
               placeholder="Enter Id or Name"
             />
