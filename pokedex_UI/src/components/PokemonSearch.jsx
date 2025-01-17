@@ -12,7 +12,6 @@ const PokemonSearch = ({setSelectedPokemon}) => {
   const getPokemonList = async () => {
     try {
       const data = await fetchPokemonList()
-      console.log(data);
       setPokemonList(data)
     } catch (error) {
       console.error("Error fetching:", error);
