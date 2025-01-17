@@ -5,7 +5,7 @@ import "../assets/home.css";
 import React, { useState, useEffect} from "react";
 import fetchPokemonList from "../api/apiPokemonSearch";
 
-const PokemonSearch = () => {
+const PokemonSearch = ({setSelectedPokemon}) => {
   const [searchPokemon, setsearchPokemon] = useState("");
   const [pokemonList , setPokemonList] = useState([]);
   
@@ -25,6 +25,10 @@ const PokemonSearch = () => {
   const handleSearchPokemon = (e) => {
     setsearchPokemon(e.target.value); 
   };
+
+  const handleSearch = (e) => {
+    setSelectedPokemon(searchPokemon);
+  };
   
 
   return (
@@ -41,7 +45,7 @@ const PokemonSearch = () => {
               className="input-search me-2"
               placeholder="Enter Id or Name"
             />
-            <Button variant="outline-success" className="me-2">
+            <Button variant="outline-success" className="me-2" onClick={handleSearch}>
               Search
             </Button>
             <Button variant="outline-warning">Random</Button>
