@@ -22,7 +22,7 @@ const PokemonDetail = ({ pokeIdOrName }) => {
   return (
     <>
       <div className="page-container">
-        <div className="detail">
+        <div className="detail input-gradient">
           {pokemon ? (
             <>
               <div className="container">

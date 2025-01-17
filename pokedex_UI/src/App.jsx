@@ -6,9 +6,9 @@ const App = () => {
   return (
     <>
       <PokemonSearch />
-      <div>
-        <PokemonDetail pokeIdOrName="45" />
-      </div>
+    {/*  <div>
+        <PokemonDetail pokeIdOrName="500" />
+      </div>*/}
     </>
   );
 };
