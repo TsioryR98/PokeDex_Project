@@ -10,7 +10,6 @@ const App = () => {
     <>
     <div>
       <PokemonSearch setSelectedPokemon={setSelectedPokemon} />
-      
       {selectedPokemon && <PokemonDetail pokeIdOrName={selectedPokemon.trim().toString().toLowerCase()} />}
     </div>
     </>
