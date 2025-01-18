@@ -2,33 +2,32 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import "../assets/home.css";
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import fetchPokemonList from "../api/apiPokemonSearch";
 
-const PokemonSearch = ({setSelectedPokemon}) => {
+const PokemonSearch = ({ setSelectedPokemon }) => {
   const [searchPokemon, setsearchPokemon] = useState("");
-  const [pokemonList , setPokemonList] = useState([]);
-  
+  const [pokemonList, setPokemonList] = useState([]);
+
   const getPokemonList = async () => {
     try {
-      const data = await fetchPokemonList()
-      setPokemonList(data)
+      const data = await fetchPokemonList();
+      setPokemonList(data);
     } catch (error) {
       console.error("Error fetching:", error);
     }
-  }
+  };
   useEffect(() => {
     getPokemonList();
   }, []);
 
   const handleSearchPokemon = (e) => {
-    setsearchPokemon(e.target.value); 
+    setsearchPokemon(e.target.value);
   };
 
   const handleSearch = (e) => {
     setSelectedPokemon(searchPokemon);
   };
-  
 
   return (
     <>
@@ -44,7 +43,11 @@ const PokemonSearch = ({setSelectedPokemon}) => {
               className="input-search me-2"
               placeholder="Enter Id or Name"
             />
-            <Button variant="outline-success" className="me-2" onClick={handleSearch}>
+            <Button
+              variant="outline-success"
+              className="me-2"
+              onClick={handleSearch}
+            >
               Search
             </Button>
             <Button variant="outline-warning">Random</Button>

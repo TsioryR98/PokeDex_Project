@@ -29,7 +29,9 @@ const PokemonDetail = ({ pokeIdOrName }) => {
                 <div className="pokemon-container">
                   <h5>
                     <span className="ml-2">{`#${pokemon.id.toString()}`}</span>
-                    <span className="mx-2">{pokemon.types[0].type.name.toUpperCase()}</span>
+                    <span className="mx-2">
+                      {pokemon.types[0].type.name.toUpperCase()}
+                    </span>
                   </h5>
                   <h2 className="fw-bold">{pokemon.name.toUpperCase()}</h2>
                   <p>Height: {pokemon.height}</p>
