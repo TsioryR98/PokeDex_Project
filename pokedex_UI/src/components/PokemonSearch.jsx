@@ -6,6 +6,9 @@ import React, { useState, useEffect } from "react";
 import fetchPokemonList from "../api/apiPokemonSearch";
 
 const PokemonSearch = ({ setSelectedPokemon }) => {
+  {
+    /*put as prop setSelectedPokemon to re render in pokemon details*/
+  }
   const [searchPokemon, setsearchPokemon] = useState("");
   const [pokemonList, setPokemonList] = useState([]);
 
